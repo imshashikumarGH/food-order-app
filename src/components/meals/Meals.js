@@ -5,8 +5,8 @@ import MealsSummary from "./MealsSummary";
 const Meals = (props) => {
   return (
     <>
-      <AvailableMeals />
       <MealsSummary />
+      <AvailableMeals />
     </>
   );
 };
