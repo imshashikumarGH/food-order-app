@@ -4,11 +4,12 @@ import Modal from "../common/Modal";
 
 const Cart = (props) => {
   const cartItems = (
-    <ul className={classes['cart-items']}>
-      {[{ id: 'c1', name: 'Sushi', amount: 2, price: 12.99 }].map((item) => (
+    <ul className={classes["cart-items"]}>
+      {[{ id: "c1", name: "Sushi", amount: 2, price: 12.99 }].map((item) => (
         <li>{item.name}</li>
       ))}
-    </ul>);
+    </ul>
+  );
 
   return (
     <Modal>
@@ -18,7 +19,12 @@ const Cart = (props) => {
         <span>$39.99</span>
       </div>
       <div className={classes.actions}>
-        <button className={classes['button--alt']}>Close</button>
+        <button
+          className={classes["button--alt"]}
+          onClick={props.onHideCart}
+        >
+          Close
+        </button>
         <button className={classes.button}>Order</button>
       </div>
     </Modal>
