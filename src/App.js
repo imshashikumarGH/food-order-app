@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Header from "./components/layout/Header";
 import Meals from "./components/meals/Meals";
 import Cart from "./components/cart/Cart";
+import CartProvider from "./components/store/CartProvider";
 
 function App() {
   //to keep the backdrop reuseable we are using props to pass a multiple level instead of context
@@ -15,13 +16,13 @@ function App() {
   };
 
   return (
-    <React.Fragment>
+    <CartProvider>
       {cartIsShown && <Cart onHideCart ={hideCartHandler}/>}
       <Header onShownCart = {shownCartHandler} />
       <main>
         <Meals></Meals>
       </main>
-    </React.Fragment>
+    </CartProvider>
   );
 }
 
