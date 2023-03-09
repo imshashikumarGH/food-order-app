@@ -4,6 +4,7 @@ import Meals from "./components/meals/Meals";
 import Cart from "./components/cart/Cart";
 
 function App() {
+  //to keep the backdrop reuseable we are using props to pass a multiple level instead of context
   const [cartIsShown, setCartIsShown] = useState(false);
 
   const shownCartHandler = () => {
