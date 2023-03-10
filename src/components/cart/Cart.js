@@ -8,7 +8,8 @@ const Cart = (props) => {
   const cartCtx = useContext(CartContext);
   const cartItemRemoveHandler = (id) => {};
   const cartItemAddHandler = (item) => {
-    cartCtx.addItem({ ...item, amount: 1 });
+    cartCtx.addItem({ id:item.id, price:item.price,name:item.name, amount: 1 });
+    //cartCtx.addItem({...item, amount:1})
   };
 
   const cartItems = (
